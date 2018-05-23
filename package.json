@@ -79,6 +79,7 @@
     "@tensorflow/tfjs": "^0.10.0",
     "deeplearn": "0.5.1",
     "deeplearn-knn-image-classifier": "0.4.2",
-    "deeplearn-squeezenet": "0.2.0"
+    "deeplearn-squeezenet": "0.2.0",
+    "tone": "^0.12.80"
   }
 }
