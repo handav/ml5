@@ -1,21 +1,25 @@
 // Copyright (c) 2018 ml5
+//
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
-//import * as dl from 'deeplearn';
-// import ImageClassifier from './ImageClassifier/index';
-// import KNNImageClassifier from './KNNImageClassifier/index';
-// import LSTMGenerator from './LSTM/index';
+
+import * as tf from '@tensorflow/tfjs';
+import ImageClassifier from './ImageClassifier/';
+import Word2Vec from './Word2vec/';
+import YOLO from './YOLO';
+import * as imageUtils from './utils/imageUtilities';
+import StyleTransfer from './StyleTransfer/';
 import Crepe from './Crepe/index';
-// import Word2Vec from './Word2vec/index';
-// import StyleTransfer from './StyleTransfer/index';
-// import * as imageUtils from './utils/imageUtilities';
+
+// import LSTMGenerator from './LSTM/';
+
 module.exports = {
-  // ImageClassifier,
-  // KNNImageClassifier,
-  // LSTMGenerator,
+  ImageClassifier,
+  YOLO,
+  Word2Vec,
+  StyleTransfer,
   Crepe,
-  // StyleTransfer,
-  // Word2Vec,
-  // ...imageUtils,
-  // dl,
+  // LSTMGenerator,
+  ...imageUtils,
+  tf,
 };
