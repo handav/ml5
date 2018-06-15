@@ -8,32 +8,32 @@ If you want to help develop this library, here are the steps to get started with
 
 1. Fork the repository to your account, and then clone it your computer:
 ```bash
-git clone https://github.com/YOURGITHUBHANDLE/ML5.git
+git clone https://github.com/YOURGITHUBHANDLE/ml5-library.git
 ```
 
 2. Install dependencies:
 
 ```bash
-cd ML5
+cd ml5-library
 npm install
 ```
 
 3. This project is developed using [webpack](https://webpack.js.org/). Webpack is a module bundler that allows to "bundle" different files into one file. This allows you to write files for specific things and then mix them all together into one single file that you can import in your page. 
 
-  Under the `/src` folder you will see that there are sub-folders for all ML5 methods. You can edit each file individually and then `build` everything into one single library.
+  Under the `/src` folder you will see that there are sub-folders for all ml5 methods. You can edit each file individually and then `build` everything into one single library.
 
   Before `building` the library you can see if everything is working.
   
   Run this command from the root of the project: 
   ```bash
-  npm run start:dev
+  npm run start
   ```
 
   Will output something like this:
 
   ```bash
   Project is running at http://localhost:8080/
-  webpack output is served from /dist/
+  webpack output is served from /
 
   Hash: 16b80528bf532975b279
   Version: webpack 2.6.1
@@ -71,7 +71,7 @@ Create a new folder called `/experiments` in the project's root folder. Create a
   <html>
   <head>
     <title>Test</title>
-    <script src="../../dist/ml5.js"></script>
+    <script src="http://localhost:8080/ml5.js"></script>
   </head>
   <body>
 
@@ -89,7 +89,7 @@ Create a new folder called `/experiments` in the project's root folder. Create a
 
   ```javascript
   'use strict';
-  console.log('ML5 loaded');
+  console.log('ml5 loaded');
   ```
   
   To something like this:
@@ -109,11 +109,11 @@ Create a new folder called `/experiments` in the project's root folder. Create a
   That should output something very similar to the `webpack-dev-server` but you'll notice that at the end is this line:
 
   ```bash
-  > ml5@0.0.1 build:min /Users/ml5/Desktop/sandbox/ml5
-  > uglifyjs dist/ml5.js -o dist/ml5.min.js
+  > webpack --config webpack.prod.babel.js
+  > Done in 15.13s.
   ```
 
-  Which means the library was successfully build and minified.
+  Which means the library was successfully built and minified.
 
   6. (OPTIONAL) Commit your changes. We are using [commitizen](https://github.com/commitizen/cz-cli) to commit changes. Commitizen is a tool that allows you to specify commit in a more precise way. You can run it instead of your regular `git commit -m 'msg'` with:
 
@@ -139,66 +139,7 @@ Create a new folder called `/experiments` in the project's root folder. Create a
 
 ## Running Unit Tests
 
-This project uses [Jest](https://facebook.github.io/jest/) to run unit tests.
-
-Jest is an open-source framework to run javascript tests.
-
-If you are unfamiliar with running unit tests on Javascript, consider watching [this tutorial](https://egghead.io/lessons/javascript-unit-testing-with-mocha-and-chai).
-
-We recommend having two open tabs in your terminal window: one monitoring your source code (as shown above) and another watching for unit tests. 
-
-To start the test environment, run:
-
-```bash
-npm run test:dev
-```
-
-This will watch for files changes and run tests when necessary.
-
-If you just want to check if all tests are passing:
-
-```bash
-npm run test
-```
-
-## ML5 Website
-
-The [ML5 website](https://ml5js.github.io/) is built with [Docusaurus](https://docusaurus.io/).
-
-Docusaurus is an open-source library, built with React, to create and maintain documentation websites.
-
-All the website content and documentation lives in the master branch but website is served from `gh-pages`. 
-
-### Contributing
-
-Almost all the content for the website can be found in markdown under the `docs/` folder at the root level of the repository.
-The naming convention we are using is the following:
-
-* Examples are named: `examples-[name of example].md`
-* API Reference files are named: `api-[Class].md`
-* Glossary: `glossary-[type].md`
-
-If you wish to help develop the website, first you'll need to install the necessary dependencies for Docusaurus.
-
-From the root of the project run:
-```
-cd website
-npm install
-```
-
-And then start the development server:
-
-```
-npm run start
-```
-
-This wil create a server that will reload whenever there are changes in the website source code.
-
-To build the website run:
-
-```bash
-npm run build
-```
+WIP
 
 ## Additional Resources
 
